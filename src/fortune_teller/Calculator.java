@@ -75,6 +75,7 @@ void calculator1() {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		JButton ButtonPressed= (JButton) e.getSource();
 		String text= field.getText();
 		String text1= field1.getText();
 		 textfield= Integer.parseInt(text);
@@ -83,22 +84,26 @@ void calculator1() {
 		 int subtract;
 		 int multiply;
 		 int divide;
+	int answer;
 	
-		 if(button1.equals(e)) {
+		 if(ButtonPressed.equals(button1)) {
 		 added=	add(textfield,textfield1);
-			
+			answer= added;
 		}
-		else if (button2.equals(e)) {
+		else if (ButtonPressed.equals(button2)) {
 			 subtract= subtract(textfield,textfield1);
+			 answer= subtract;
 		}
-		else if(button3.equals(e)) {
+		else if(ButtonPressed.equals(button3)) {
 			 multiply= multiply(textfield, textfield1);
+			 answer= multiply;
 		}
-		else if(button4.equals(e)) {
+		else if(ButtonPressed.equals(button4)) {
 			 divide= divide(textfield, textfield1);
+			 answer= divide;
 		}
 		
-		
+		label.add(ButtonPressed);
 		
 	} 
 	
