@@ -80,27 +80,24 @@ void calculator1() {
 		String text1= field1.getText();
 		 textfield= Integer.parseInt(text);
 		 textfield1= Integer.parseInt(text1);
-		 int added;
-		 int subtract;
-		 int multiply;
-		 int divide;
-	int answer;
+		
 	
 		 if(ButtonPressed.equals(button1)) {
-		 added=	add(textfield,textfield1);
-			answer= added;
+			add(textfield,textfield1);
+		 button1.add(label);
+			
 		}
 		else if (ButtonPressed.equals(button2)) {
-			 subtract= subtract(textfield,textfield1);
-			 answer= subtract;
+			 subtract(textfield,textfield1);
+			 button2.add(label);
 		}
 		else if(ButtonPressed.equals(button3)) {
-			 multiply= multiply(textfield, textfield1);
-			 answer= multiply;
+			 multiply(textfield, textfield1);
+			 button3.add(label);
 		}
 		else if(ButtonPressed.equals(button4)) {
-			 divide= divide(textfield, textfield1);
-			 answer= divide;
+			 divide(textfield, textfield1);
+			 button4.add(label);
 		}
 		
 		label.add(ButtonPressed);
